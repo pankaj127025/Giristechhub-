@@ -1,0 +1,40 @@
+package Self;
+class A{
+A(){ System.out.println("\n Class A Constructor\n"); }
+  void show()
+{
+System.out.printf("\n I am parent class show \n");
+}
+
+}
+class B extends A{
+	B(){ System.out.println("\n Class B Constructor\n"); }
+ void show()
+{
+System.out.printf("\n I am child class show \n");
+}
+}
+class C extends B{
+	C(){ System.out.println("\n Class C Constructor\n"); }
+}
+class D extends C{
+	D(int a){ System.out.println("\n Class D Constructor\n"+ a); }
+}
+class E extends D{
+	int a;
+ E(){
+	 super
+	 (23)
+	 ;
+	System.out.println("\n Class E Constructor "); 
+ }
+}
+public class M {
+
+	public static void main(String[] args) {
+		E e=new E();
+		// TODO Auto-generated method stub
+
+	}
+
+}

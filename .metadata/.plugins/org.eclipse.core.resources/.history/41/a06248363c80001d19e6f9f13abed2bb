@@ -1,0 +1,19 @@
+package NormalPractical;
+import java.util.*;
+class Divison{
+	void div(int a,int b)
+	{
+		
+		System.out.printf("Divison is "+a/b);
+		
+	}
+}
+public class Throwexception {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner s=new Scanner(System.in);
+System.out.println();
+	}
+
+}

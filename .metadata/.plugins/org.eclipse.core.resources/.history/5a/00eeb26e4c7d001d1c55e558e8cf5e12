@@ -1,0 +1,47 @@
+package NormalPractical;
+import java.util.*;
+class StringParent 
+{
+	char a[];
+	 void setvalue(char a[])
+	{
+		 this.a=a;
+		 a.toString();
+	
+	}
+}
+class FindInteger extends StringParent{
+	void findInteger()
+	
+	{
+	for(int i=0;i<a.length;i++)
+	{
+		System.out.println(a);
+		
+	}
+	}
+	
+}
+class FindInteger1 extends StringParent{
+	void findInteger()
+	
+	{
+		
+	}
+	
+}
+public class CheckIntegerApp {
+	public static void main(String x[])
+	{
+		
+		Scanner s=new Scanner(System.in);
+		FindInteger f=new FindInteger();
+		System.out.println();
+		char a[]= {'p','a','n','k','a','j'};
+f.setvalue(a);
+f.findInteger();
+		
+	
+	}
+
+}

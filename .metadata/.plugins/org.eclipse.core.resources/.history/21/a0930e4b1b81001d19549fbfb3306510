@@ -1,0 +1,50 @@
+package classesandibjects;
+
+import java.util.Scanner;
+
+class Prime {
+	int no;
+
+	void setValue(int no) {
+		this.no = no;
+	}
+
+	boolean checkPrime() {
+		boolean k = false;
+
+		for (int i = 2; i < no; i++) {
+
+			if (no % i == 0) {
+				k = true;
+				break;
+			}
+
+		}
+System.out.println("K value is \t"+k);
+		return k;
+	}
+
+}
+
+public class PrimeApp
+
+{
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int number;
+		System.out.println("Enter the number to check");
+		number = sc.nextInt();
+		Prime p = new Prime();
+
+		p.setValue(number);
+		boolean j = p.checkPrime();
+		System.out.println("j value is \t"+j);
+		if (j) {
+			System.out.printf("\n %d \t Number is Prime Number", number);
+		} else {
+			System.out.printf("\n %d \t Number is Not Prime Number", number);
+		}
+	}
+
+}

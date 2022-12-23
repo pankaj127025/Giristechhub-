@@ -1,0 +1,180 @@
+package Test1912;
+
+import java.util.*;
+
+class SportMan {
+	private int id;
+	private String name;
+	private String sporttype;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getSporttype() {
+		return sporttype;
+	}
+
+	public void setSporttype(String sporttype) {
+		this.sporttype = sporttype;
+	}
+
+	public SportMan(int id, String name, String sporttype) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.sporttype = sporttype;
+	}
+
+}
+
+class Player extends SportMan {
+
+	public int getTotalmatch() {
+		return totalmatch;
+	}
+
+	public void setTotalmatch(int totalmatch) {
+		this.totalmatch = totalmatch;
+	}
+
+	public int getTotalrun() {
+		return totalrun;
+	}
+
+	public void setTotalrun(int totalrun) {
+		this.totalrun = totalrun;
+	}
+
+	public Player(int id, String name, String sporttype, int totalmatch, int totalrun) {
+		super(id, name, sporttype);
+		this.totalmatch = totalmatch;
+		this.id = id;
+		this.name = name;
+		this.sporttype = sporttype;
+		this.totalrun = totalrun;
+	}
+
+	int totalmatch;
+	int totalrun;
+
+	int id;
+	String name;
+	String sporttype;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getSporttype() {
+		return sporttype;
+	}
+
+	public void setSporttype(String sporttype) {
+		this.sporttype = sporttype;
+	}
+
+	void displayPlayerInfo() {
+		System.out.println(id + "\t" + name + "\t" + sporttype + "\t" + totalmatch + "\t" + totalrun);
+
+	}
+}
+
+public class PlayerApp {
+
+	public static void main(String[] args) {
+
+		Scanner s = new Scanner(System.in);
+
+		System.out.println("\n Enter the number of Player\n");
+		int size = s.nextInt();
+
+		Player p[] = new Player[size];
+
+		for (int i = 0; i < size; i++) {
+			System.out.println("\n Enter the Id of Player\n");
+			int id = s.nextInt();
+			System.out.println("\n Enter the name of Player\n");
+			String name = s.next();
+			System.out.println("\n Enter the SportType  of Player\n");
+			String sporttype = s.next();
+			System.out.println("\n Enter the Totalmatch   of Player\n");
+
+			int totalmatch = s.nextInt();
+			System.out.println("\n Enter the Totalrun   of Player\n");
+
+			int totalrun = s.nextInt();
+			p[i] = new Player(id, name, sporttype, totalmatch, totalrun);
+
+		}
+
+		// type one by descending order
+
+//		for (int i = 0; i < size; i++) {
+//			for (int j = i + 1; j < size; j++)
+//
+//			{
+//				
+//				if(p[i].getTotalmatch()<p[j].getTotalmatch())
+//				{
+//					Player temp=p[i];
+//					p[i]=p[j];
+//					p[j]=temp;
+//				}
+//
+//			}
+//		}
+//		
+//		
+//		
+//		System.out.println("\n highest match played  player is follows\n");
+//		p[0].displayPlayerInfo();
+//		
+//		
+
+		
+		// type -2
+		
+		int max = 0;
+		int k = 0;
+		for (int i = 0; i < size; i++) {
+			if (max < p[i].getTotalmatch())
+
+			{
+				max = p[i].getTotalmatch();
+				k = i;
+			}
+
+		}
+
+		System.out.println("\n highest match played  player is follows\n");
+		p[k].displayPlayerInfo();
+		System.out.println("\n\n total match player by playe name is :" + p[k].name + "\n matches is :" + p[k].getTotalmatch());
+
+	}
+
+}

@@ -1,0 +1,40 @@
+package practical0812;
+import java.util.*;
+class Duck{
+	void duckNumber(int n)
+	{
+		int no=n;
+   while(no!=0)
+   {
+	   int rem=no%10;
+	   if(rem==0)
+	   {
+		   System.out.printf("\n %d number is duck number \n ",no);
+	   break;
+	   }
+	   no=no/10;
+	   
+	   if (no>=1 && no<=9)
+	   {
+		   System.out.printf("\n %d number is Not duck number \n ",no);
+		   
+	   }
+   }
+   
+		
+	}
+}
+public class DuckNumberApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner s=new Scanner (System.in);
+System.out.println("\n Enter the nu,ber to check its duck or not \n");
+int no=s.nextInt();
+		Duck d=new Duck();
+		
+		d.duckNumber(no);
+		
+	}
+
+}

@@ -1,0 +1,58 @@
+package classesandibjects;
+
+import java.util.Scanner;
+
+class Prime{
+int count=0;
+int temp=0,number;
+void setValue(int no)
+{
+	number=no;
+
+                 
+while(no!=0)
+{
+	no=no/10;
+	count++;
+}
+
+}
+void show() {
+    boolean checkPrime=false;
+for (int i=2;i<count/2;i++) {
+if(number%i==0) {
+	checkPrime=true;
+	break;
+}
+
+}
+
+if(checkPrime) {
+	System.out.println("The givennumber"+number+"is not prime");
+	
+}
+else if(checkPrime==false) {
+	System.out.println("The Given number"+number+"is prime number");	
+	}
+
+}
+
+}
+public class PrimeApp
+{
+
+                   public static void main(String[] args) {
+	               Scanner sc=new Scanner(System.in);
+	                 int number;
+	                 	System.out.println("Enter the number to check");
+	                 	number=sc.nextInt();
+					Prime p= new Prime();
+							p.setValue(number);
+							p.show();
+	
+	
+	
+                 }
+
+}
+

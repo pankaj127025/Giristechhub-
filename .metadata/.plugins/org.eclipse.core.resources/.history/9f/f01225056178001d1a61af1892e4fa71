@@ -1,0 +1,38 @@
+package Self;
+class A{
+	int a;
+A(int a ){ 
+	this.a=a;
+	//System.out.println("\n Class A Constructor\n");
+	}
+  void show()
+{
+System.out.println("\n A is "+a);
+}
+
+}
+class B extends A{
+	int a,b;
+
+		B(int a,int b){
+			super (b);
+			
+			this.a=a;
+			this.b=b; }
+ void show()
+{
+System.out.println("\n A is "+a);
+System.out.println("\n b is "+b);
+}
+}
+
+public class M {
+
+	public static void main(String[] args) {
+B b=new B(10,20);
+b.show();
+		// TODO Auto-generated method stub
+
+	}
+
+}

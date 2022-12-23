@@ -1,0 +1,58 @@
+package Test2411;
+import java.util.*;
+class CDigit{
+	 boolean b;
+	public  boolean checkDigit(int no,int di)
+	{
+	int k=no;
+
+	while(no!=0)
+	{
+	int rem=no%10;
+	if(rem==di)
+	{
+	 b=true;
+	    break;
+	}
+	no=no/10;
+	}
+	
+	
+	
+return b;
+}
+
+public class one {
+
+	public static void main(String x[])
+	{
+	Scanner s=new Scanner(System.in);
+
+	System.out.printf("Enter the number to know digit present in that number or not\n");
+	int no=s.nextInt();
+	System.out.printf("\n Enter the digit to cheack its present or not\n");
+	int di= s.nextInt();
+
+	CDigit a=new CDigit();
+
+	boolean b=a.checkDigit(no,di);
+
+	if(b==true)
+	{
+
+	System.out.printf("\n Digit is found\n");
+	}
+
+	else
+	{
+	System.out.printf("\n Digit is not  found in given number\n");
+
+	}
+	
+	}
+	
+}
+}
+
+
+

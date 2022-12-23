@@ -1,0 +1,50 @@
+package NormalPractical;
+import java.util.*;
+
+class ManualException extends ArithmeticException{
+	public String geterror(){
+		return "We are not giving Admission below 50%";
+	}
+	
+	
+	
+}
+
+class Admission {
+	void adm(int per)
+	{
+		if(per<50)
+		{
+			ManualException ex	=new  ManualException();
+			throw ex;
+			
+		}
+		else
+		{
+System.out.println("\n Student is eligible fo taking admissiobn in giris techhub \n");			
+		}
+		
+		
+	}
+}
+public class Throwexception {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner s=new Scanner(System.in);
+System.out.println("\n Enter the student percentage");
+
+int per=s.nextInt();
+
+try {
+	Admission a=new Admission();
+	a.adm(per);
+	
+}
+catch(Exception ex)
+{
+	System.out.println("\n Error is \t  "+ex);
+}
+	}
+
+}

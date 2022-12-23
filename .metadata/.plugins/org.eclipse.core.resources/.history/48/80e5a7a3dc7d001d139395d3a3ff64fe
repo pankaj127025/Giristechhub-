@@ -1,0 +1,67 @@
+package NormalPractical;
+
+import java.util.*;
+
+class StringParent {
+	String a;
+
+	void setvalue(String a) {
+		this.a = a;
+		//String p = a.toString();
+		System.out.println(a);
+	}
+}
+
+class FindInteger extends StringParent {
+	void findInteger()
+
+	{
+		System.out.println(a.length());
+		boolean k = false;
+
+		for (int i = 0; i < a.length(); i++) {
+
+			System.out.printf("\n%d", i + 1);
+
+			System.out.println(a.charAt(i));
+			if (a.charAt(i) >= '0' || a.charAt(i) <= '9') {
+				k = true;
+				//break;
+
+			}
+		}
+
+		System.out.println(k);
+		if (k == true) {
+			System.out.println("\n Interger is present in given  char  Array ");
+		} else {
+
+			System.out.println("\n Interger is not  present in given  char  Array ");
+		}
+
+	}
+
+}
+
+class FindInteger1 extends StringParent {
+	void findInteger()
+
+	{
+
+	}
+
+}
+
+public class CheckIntegerApp {
+	public static void main(String x[]) {
+
+		Scanner s = new Scanner(System.in);
+		FindInteger f = new FindInteger();
+		System.out.println();
+		String a = "Pankaj";
+		f.setvalue(a);
+		f.findInteger();
+
+	}
+
+}

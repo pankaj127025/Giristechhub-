@@ -1,0 +1,48 @@
+package Test1912;
+
+import java.util.Scanner;
+
+class Rectangle1 {
+	int length;
+	int breath;
+
+	public Rectangle1(int length, int breath) {
+		super();
+		this.length = length;
+		this.breath = breath;
+		System.out.println("\n Area of rectangle is \t"+length*breath);
+	}
+
+	public Rectangle1(int length) {
+		super();
+		this.length = length;
+		System.out.println("\n Area of rectangle is \t"+length*length);
+	}
+
+	public Rectangle1() {
+		super();
+System.out.println("\n  !!!  please Enter valid data !!! \n");
+	}
+}
+
+public class RectanglArea {
+	public static void main(String[] args) {
+
+		Scanner s = new Scanner(System.in);
+
+		
+		 Rectangle1 r=new  Rectangle1();
+ r=new  Rectangle1(10);
+		  r=new  Rectangle1(10,20);
+		 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}

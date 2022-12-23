@@ -1,0 +1,58 @@
+package practical0812;
+
+import java.util.*;
+
+class Power {
+	int power(int base, int no) {
+		int po = 1;
+		for (int i = 1; i <= no; i++) {
+			po = base * po;
+		}
+		return po;
+	}
+}
+
+class Armstrong {
+	void armStong(int no) {
+
+		int n = no;
+		int a = no;
+		int count = 1;
+		while (n != 0) {
+			count++;
+			n = n / 10;
+		}
+		int sum = 0;
+		while (a != 0) {
+			int rem = a % 10;
+			Power p = new Power();
+
+			int po = p.power(rem, count);
+			sum = po + sum;
+			a = a / 10;
+
+		}
+
+		if (sum == no) {
+			System.out.printf("\n %d Number is Armstrong Number\n ", no);
+		} else {
+			System.out.printf("\n %d Number is Not Armstrong Number\n ", no);
+
+		}
+
+	}
+}
+
+public class ArmstrongNumberApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner s=new Scanner(System.in);
+		System.out.println("\n Enter the number to know it ArmStrong number or not \n");
+		int no=s.nextInt();
+		Armstrong a=new Armstrong();
+		a.armStong(no);
+	}
+
+}

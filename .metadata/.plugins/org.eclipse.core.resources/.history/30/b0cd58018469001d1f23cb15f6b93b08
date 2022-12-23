@@ -1,0 +1,26 @@
+package org.techhub;
+class square{
+	int no;
+	void setvalue(int x)
+	{
+		no=x;
+	}
+	void showsquare()
+	{
+		System.out.printf("square is %d of number %d",no*no,no);
+	}
+}
+public class FirstApp {
+	public static void main(String args[])
+	{
+		
+		square s1=new square();
+		s1.setvalue(5);
+		square s2=new square();
+		s2.showsquare();
+		
+		
+		
+	}
+
+}

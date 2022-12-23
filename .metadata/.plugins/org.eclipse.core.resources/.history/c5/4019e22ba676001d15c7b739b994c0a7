@@ -1,0 +1,27 @@
+package practical0812;
+
+import java.util.*;
+
+class Sp {
+	void SwapNumber(int a, int b) {
+		System.out.printf("\n Before swapping value of A=%d and value B=%d\n", a, b);
+		int temp = a;
+		a = b;
+		b = temp;
+
+		System.out.printf("\n After swapping value of A=%d and value B=%d\n", a, b);
+	}
+}
+
+public class swap {
+
+	public static void main(String x[]) {
+		Scanner s = new Scanner(System.in);
+		System.out.printf("\n Please Enter the value of A and B");
+int a=s.nextInt();
+int b=s.nextInt();
+Sp p=new Sp();
+p.SwapNumber(a, b);
+	}
+
+}

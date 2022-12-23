@@ -1,0 +1,23 @@
+package CollectionApplication;
+
+import java.util.Enumeration;
+import java.util.Vector;
+
+public class EnumerationApp {
+	public static void Maib(String x[]) {
+
+		Vector v = new Vector();
+		v.add(5);
+		v.add(10);
+		v.add(20);
+		v.add(30);
+		v.add(60);
+Enumeration enm=v.elements();
+
+while(enm.hasMoreElements())
+{
+	Object obj=enm.nextElement();
+}
+System.out.println(obj);
+	}
+}

@@ -1,0 +1,166 @@
+package NormalPractical;
+
+import java.util.*;
+
+abstract class Person {
+	private char name[];
+
+	public Person(char[] name, int mob, String adharno) {
+		super();
+		this.name = name;
+		this.mob = mob;
+		this.adharno = adharno;
+	}
+
+	abstract void diplay();
+
+	public char[] getName() {
+		return name;
+	}
+
+	public void setName(char[] name) {
+		this.name = name;
+	}
+
+	public int getMob() {
+		return mob;
+	}
+
+	public void setMob(int mob) {
+		this.mob = mob;
+	}
+
+	public String getAdharno() {
+		return adharno;
+	}
+
+	public void setAdharno(String adharno) {
+		this.adharno = adharno;
+	}
+
+	private int mob;
+	private String adharno;
+
+}
+
+class Employee extends Person {
+	private int empid;
+	private char dept[];
+	private int sal;
+	private char name[];
+
+	private int mob;
+	private char[] adharno;
+
+	public Employee(char[] name, int mob, char[] adharno, int empid, char[] dept, int sal) {
+		super(name, mob, adharno.toString());
+		this.empid = empid;
+		this.dept = dept;
+		this.sal = sal;
+		this.name = name;
+		this.mob = mob;
+		this.adharno = adharno;
+	}
+
+	public int getEmpid() {
+		return empid;
+	}
+
+	public void setEmpid(int empid) {
+		this.empid = empid;
+	}
+
+	public char[] getDept() {
+		return dept;
+	}
+
+	public void setDept(char[] dept) {
+		this.dept = dept;
+	}
+
+	public int getSal() {
+		return sal;
+	}
+
+	public void setSal(int sal) {
+		this.sal = sal;
+	}
+
+	public char[] getName() {
+		return name;
+	}
+
+	public void setName(char[] name) {
+		this.name = name;
+	}
+
+	public int getMob() {
+		return mob;
+	}
+
+	public void setMob(int mob) {
+		this.mob = mob;
+	}
+
+//	public char [] getAdharno() {
+//		return adharno;
+//	}
+	public void setAdharno(char[] adharno) {
+		this.adharno = adharno;
+	}
+
+	@Override
+	void diplay() {
+		System.out.println("\n name is \t");
+		System.out.print(name);
+		System.out.println("\n Mobile number  is \t" + mob);
+		System.out.println("\n Adhar no  is \t");
+		System.out.print(adharno);
+		System.out.println("\n Empid is \t" + empid);
+
+		System.out.println("\n dept  is \t");
+
+		System.out.print(dept);
+		System.out.println("\n Salary  is \t" + sal);
+	}
+
+}
+
+public class EmployeeApp {
+
+	public static void main(String[] args) {
+
+		Scanner s = new Scanner(System.in);
+		System.out.println("\n Enter the number of employee\n");
+		int size = s.nextInt();
+		Employee e[] = new Employee[size];
+
+		for (int i = 0; i < size; i++) {
+			System.out.println("\n Enter the name of employee\n");
+			char name[] = s.next().toCharArray();
+
+			System.out.println("\n Enter the Mobile number \n");
+			int mob = s.nextInt();
+
+			System.out.println("\n Enter the adhar no\n");
+			char adharno[] = s.next().toCharArray();
+
+			System.out.println("\n Enter the employee id \n");
+			int empid = s.nextInt();
+
+			System.out.println("\n Enter the Departement of employee \n");
+			char dept[] = s.next().toCharArray();
+
+			System.out.println("\n Enter the salary of employee\n");
+			int sal = s.nextInt();
+
+			e[i] = new Employee(name, mob, adharno, empid, dept, sal);
+		}
+
+		for (int i = 0; i < size; i++) {
+			e[i].diplay();
+		}
+
+	}
+
+}

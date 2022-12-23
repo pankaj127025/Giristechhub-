@@ -1,0 +1,28 @@
+package CollectionApplication;
+import java.util.*;
+
+public class MaxvalueApp {
+
+	public static void main(String[] args) {
+
+		Vector v = new Vector();
+		v.add(5);
+		v.add(7);
+		v.add(8);
+		v.add(3);
+		v.add(13);
+
+		Object ob = v.get(0);
+
+		int max = (int) ob;
+		for (int i = 0; i < v.size(); i++) {
+			Object obj = v.get(i);
+
+			if (max < (int) obj) {
+				max = (int) obj;
+			}
+		}
+		System.out.println("\n Max value in collection is \t" + max);
+	}
+
+}
